@@ -26,4 +26,14 @@ RUN apt-get update && \
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3 get-pip.py
 
+COPY requirements.txt ./
+
+RUN pip3 install --upgrade setuptools
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+# Enable udevd so that plugged dynamic hardware devices show up in our container.
+ENV UDEV=1
+ENV DBUS_SYSTEM_BUS_ADDRESS unix:path=/host/run/dbus/system_bus_socket
+
 RUN [ "cross-build-end" ]
