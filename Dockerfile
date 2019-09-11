@@ -28,7 +28,9 @@ RUN apt-get update && \
   i2c-tools \
   python3-pil \
   git \
-  omxplayer && \
+  omxplayer \
+  x11-xserver-utils \
+  xserver-xorg && \
   apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
