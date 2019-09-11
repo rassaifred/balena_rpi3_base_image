@@ -19,6 +19,14 @@ RUN apt-get update && \
   libdbus-1-dev \
   python-dbus \
   python3-dbus \
+  libjpeg-dev \
+  libopenjp2-7 \
+  zlib1g \
+  python3-dev \
+  python-imaging \
+  python-smbus \
+  i2c-tools \
+  python3-pil \
   git \
   omxplayer && \
   apt-get clean && rm -rf /var/lib/apt/lists/*

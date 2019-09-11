@@ -6,3 +6,5 @@ Pypubsub>=3.3
 omxplayer-wrapper>=0.3.2
 sh>=1.08
 gpiozero>=1.5.1
+Adafruit-SSD1306 >= 1.6.2
+Pillow >= 6.1.0
